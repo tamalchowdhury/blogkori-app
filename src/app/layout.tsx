@@ -30,9 +30,19 @@ export default function RootLayout({
             </h1>
           </div>
         </header>
-        <main className='max-w-[800px] mx-auto bg-white min-h-full p-4 md:px-[80px] md:pt-[40px] leading-loose'>
-          {children}
-        </main>
+        <div className='grid md:grid-cols-[650px_1fr] gap-[40px] bg-white max-w-[1050px] mx-auto md:px-[80px] md:pt-[40px]'>
+          <main className='  min-h-full p-4 leading-loose'>{children}</main>
+          <aside className='md:mt-[50px]'>
+            <h3 className={`${merriweather.className} font-bold`}>Sponsore</h3>
+            <Link
+              href='https://www.plesk.com/blog/various/free-wordpress-cdn/'
+              target='_blank'
+              className='border-b border-b-pink-600 border-dashed'
+            >
+              Free WordPress CDN
+            </Link>
+          </aside>
+        </div>
       </body>
     </html>
   )
