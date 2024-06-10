@@ -1,7 +1,6 @@
 import Link from "next/link"
 import React from "react"
-import { merriweather } from "../layout"
-import { sleep } from "../lib/utils"
+import { merriweather } from "../lib/utils"
 
 export default async function HomeLatestPosts() {
   const response = await fetch(

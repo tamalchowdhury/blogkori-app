@@ -1,7 +1,7 @@
-import { merriweather } from "./layout"
 import { Suspense } from "react"
 import HomeLatestPosts from "./components/home-latest-posts"
 import LoadingPosts from "./components/loading-posts"
+import { merriweather } from "./lib/utils"
 
 export default async function Home() {
   return (

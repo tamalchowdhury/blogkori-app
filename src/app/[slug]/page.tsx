@@ -1,5 +1,4 @@
 import React, { Suspense } from "react"
-import { merriweather } from "../layout"
 import { sleep } from "../lib/utils"
 import LoadingSinglePost from "./loading-single-post"
 import SinglePostComponent from "./single-post"

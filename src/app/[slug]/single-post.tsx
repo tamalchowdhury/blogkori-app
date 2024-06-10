@@ -1,8 +1,11 @@
 import React from "react"
-import { sleep } from "../lib/utils"
-import { merriweather } from "../layout"
+import { merriweather } from "../lib/utils"
 
-export default async function SinglePostComponent({ slug }) {
+type Props = {
+  slug: string
+}
+
+export default async function SinglePostComponent({ slug }: Props) {
   const response = await fetch(
     `https://blogkori.com/wp-json/wp/v2/posts?slug=${slug}`
   )
