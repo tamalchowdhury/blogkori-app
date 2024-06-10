@@ -1,11 +1,22 @@
 import React, { Suspense } from "react"
-import { sleep } from "../lib/utils"
+import { fetchSinglePost, sleep } from "../lib/utils"
 import LoadingSinglePost from "./loading-single-post"
 import SinglePostComponent from "./single-post"
+import { Metadata } from "next"
 
 type Props = {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const { slug } = params
+  const post = await fetchSinglePost(slug)
+
+  return {
+    title: post[0].title.rendered,
+    description: post[0].excerpt.rendered,
   }
 }
 
