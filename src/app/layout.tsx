@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Merriweather } from "next/font/google"
 import "./globals.css"
+import Link from "next/link"
 
 const inter = Inter({ subsets: ["latin"] })
+export const merriweather = Merriweather({ weight: "900", subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,15 +19,18 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`bg-slate-200 h-screen
+        className={`bg-slate-200 text-[#333] h-screen
+          
          ${inter.className}`}
       >
         <header className='p-8 bg-blue-300'>
           <div className='max-w-[1200px] mx-auto'>
-            <h1>BlogKori</h1>
+            <h1 className={`${merriweather.className} text-[24px]`}>
+              <Link href='/'>BlogKori</Link>
+            </h1>
           </div>
         </header>
-        <main className='max-w-[1200px] mx-auto bg-white min-h-full p-8'>
+        <main className='max-w-[800px] mx-auto bg-white min-h-full p-4 md:px-[80px] md:pt-[40px] leading-loose'>
           {children}
         </main>
       </body>
