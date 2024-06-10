@@ -15,8 +15,8 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const post = await fetchSinglePost(slug)
 
   return {
-    title: post[0].title.rendered,
-    description: post[0].excerpt.rendered,
+    title: post.title.rendered,
+    description: post.excerpt.rendered,
   }
 }
 

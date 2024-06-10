@@ -11,5 +11,5 @@ export async function fetchSinglePost(slug: string) {
     `https://blogkori.com/wp-json/wp/v2/posts?slug=${slug}`
   )
   const post = await response.json()
-  return post
+  return post[0]
 }
