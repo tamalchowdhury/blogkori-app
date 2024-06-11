@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.post__body p {
+  @apply mb-6;
+}
+
+.post__body .wp-block-image {
+  @apply border mb-6;
+}
+
+.post__body .wp-block-heading {
+  @apply text-2xl font-bold my-6;
+}

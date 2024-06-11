@@ -21,7 +21,7 @@ export default async function HomeLatestPosts() {
             </h2>
           </Link>
           <div
-            className='text-[20px]'
+            className='text-[16px] md:text-[20px]'
             dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
           />
           <span>

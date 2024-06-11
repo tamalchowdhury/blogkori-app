@@ -14,12 +14,12 @@ export default async function SinglePostComponent({ slug }: Props) {
   return (
     <div className='space-y-4'>
       <h1
-        className={`text-[38px] font-bold leading-tight ${merriweather.className}`}
+        className={`text-[28px] md:text-[38px] font-bold leading-tight ${merriweather.className}`}
       >
         {post.title.rendered}
       </h1>
       <div
-        className='text-[20px]'
+        className='post__body text-[16px] md:text-[20px]'
         dangerouslySetInnerHTML={{ __html: post.content.rendered }}
       />
     </div>
