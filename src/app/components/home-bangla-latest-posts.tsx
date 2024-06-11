@@ -1,12 +1,12 @@
 import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
-import { API_URL, BANGLA_CATEGORY } from "../lib/consts"
+import { API_URL, BANGLA_CATEGORY, HOME_POST_LIMIT } from "../lib/consts"
 import { banglaHfont, shamimFont } from "@/fonts/fonts"
 
 export default async function HomeBanglaLatestPosts() {
   const response = await fetch(
-    `${API_URL}/posts?categories=${BANGLA_CATEGORY}&per_page=3`,
+    `${API_URL}/posts?categories=${BANGLA_CATEGORY}&per_page=${HOME_POST_LIMIT}`,
     {
       next: {
         revalidate: 60,
