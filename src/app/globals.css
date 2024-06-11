@@ -17,3 +17,9 @@
 .post__body a {
   @apply text-accent border-b border-accent border-dashed;
 }
+
+/* social share buttons */
+
+.share-button {
+  @apply py-2 px-4 rounded-full text-white/80 hover:text-white cursor-pointer transition;
+}
