@@ -1,11 +1,10 @@
 import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
+import { API_URL } from "../lib/consts"
 
 export default async function HomeLatestPosts() {
-  const response = await fetch(
-    `https://blogkori.com/wp-json/wp/v2/posts?per_page=5`
-  )
+  const response = await fetch(`${API_URL}/posts?per_page=5`)
 
   const post = await response.json()
 
