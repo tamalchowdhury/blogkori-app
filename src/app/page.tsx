@@ -3,6 +3,7 @@ import HomeEnglishLatestPosts from "./components/home-english-latest-posts"
 import LoadingPosts from "./components/loading-posts"
 import { merriweather } from "./lib/utils"
 import HomeBanglaLatestPosts from "./components/home-bangla-latest-posts"
+import { banglaHfont } from "@/fonts/fonts"
 
 export default async function Home() {
   return (
@@ -11,7 +12,7 @@ export default async function Home() {
         <h3
           className={`${merriweather.className} uppercase -ml-[10px] mb-2 tracking-wider text-[14px]`}
         >
-          Latest Blog Posts
+          Latest English Posts
         </h3>
         <Suspense fallback={<LoadingPosts />}>
           <HomeEnglishLatestPosts />
@@ -19,9 +20,9 @@ export default async function Home() {
       </section>
       <section>
         <h3
-          className={`${merriweather.className} uppercase -ml-[10px] mb-2 tracking-wider text-[14px]`}
+          className={`${banglaHfont.className} uppercase -ml-[10px] mb-2 tracking-wider text-[18px]`}
         >
-          Latest Bangla Posts
+          বাংলা পোস্টগুলো
         </h3>
         <Suspense fallback={<LoadingPosts />}>
           <HomeBanglaLatestPosts />

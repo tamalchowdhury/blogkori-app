@@ -1,10 +1,10 @@
 import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
-import { API_URL } from "../lib/consts"
+import { API_URL, ENGLISH_CATEGORY } from "../lib/consts"
 
 export default async function HomeEnglishLatestPosts() {
-  const response = await fetch(`${API_URL}/posts?categories=2&per_page=3`, {
+  const response = await fetch(`${API_URL}/posts?categories=${ENGLISH_CATEGORY}&per_page=3`, {
     next: {
       revalidate: 60,
     },
