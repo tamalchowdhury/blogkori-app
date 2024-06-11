@@ -3,8 +3,12 @@ import React from "react"
 import { merriweather } from "../lib/utils"
 import { API_URL } from "../lib/consts"
 
-export default async function HomeLatestPosts() {
-  const response = await fetch(`${API_URL}/posts?per_page=5`)
+export default async function HomeEnglishLatestPosts() {
+  const response = await fetch(`${API_URL}/posts?categories=2&per_page=3`, {
+    next: {
+      revalidate: 60,
+    },
+  })
 
   const post = await response.json()
 
