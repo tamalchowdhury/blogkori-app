@@ -13,3 +13,11 @@ export async function fetchSinglePost(slug: string) {
   if (post.length === 0) return null
   return post[0]
 }
+
+export function prettyDate(date: string) {
+  return new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })
+}
