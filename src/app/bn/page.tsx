@@ -8,8 +8,8 @@ export default function BanglaPage() {
     <div>
       <BanglaTitle>বাংলা পোস্টগুলো</BanglaTitle>
       <Suspense fallback={<LoadingPosts />}>
-          <HomeBanglaLatestPosts />
-        </Suspense>
+        <HomeBanglaLatestPosts all={true} />
+      </Suspense>
     </div>
   )
 }

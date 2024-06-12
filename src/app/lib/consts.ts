@@ -5,4 +5,4 @@ export const ENGLISH_CATEGORY = 2
 export const BANGLA_CATEGORY = 3
 
 
-export const HOME_POST_LIMIT = 10
+export const HOME_POST_LIMIT = 3
