@@ -42,7 +42,7 @@ export default async function SinglePostComponent({ slug }: Props) {
   )
 }
 
-function EnglishTitle({ children }) {
+export function EnglishTitle({ children }) {
   return (
     <h1
       className={`text-[28px] md:text-[38px] font-bold leading-tight ${merriweather.className}`}
@@ -52,7 +52,7 @@ function EnglishTitle({ children }) {
   )
 }
 
-function BanglaTitle({ children }) {
+export function BanglaTitle({ children }) {
   return (
     <h1
       className={`text-[28px] md:text-[38px] font-bold leading-tight ${banglaHfont.className}`}
