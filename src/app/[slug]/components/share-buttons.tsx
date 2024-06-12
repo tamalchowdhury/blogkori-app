@@ -13,7 +13,7 @@ export default function ShareButtons({ slug, title, content }) {
   return (
     <section className=''>
       <h2 className={`${merriweather.className} text-[24px] font-bold`}>
-        Sharing is charing:
+        Sharing is Caring:
       </h2>
       <div className='buttons flex flex-wrap gap-2 my-4'>
         <Link
