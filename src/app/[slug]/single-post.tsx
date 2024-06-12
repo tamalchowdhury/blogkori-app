@@ -28,6 +28,24 @@ export default async function SinglePostComponent({ slug }: Props) {
           <EnglishTitle>{post.title.rendered}</EnglishTitle>
         )}
 
+        <div className=''>
+          <div>author photo</div>
+          <div>
+            <div>by Tamal Chowdhury</div>
+            <div>
+              Published on:{" "}
+              {
+                // convert the date to a readable format: eg 12th August 2021
+                new Date(post.date).toLocaleDateString("en-US", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })
+              }
+            </div>
+          </div>
+        </div>
+
         <div
           className='post__body text-[16px] md:text-[20px]'
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
