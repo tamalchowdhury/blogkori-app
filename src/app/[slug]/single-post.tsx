@@ -1,6 +1,6 @@
 import React from "react"
 import { fetchSinglePost, merriweather, prettyDate } from "../lib/utils"
-import { BANGLA_CATEGORY } from "../lib/consts"
+import { AUTHOR_NAME, BANGLA_CATEGORY } from "../lib/consts"
 import { banglaHfont } from "@/fonts/fonts"
 import { Share } from "next/font/google"
 import ShareButtons from "./components/share-buttons"
@@ -40,7 +40,7 @@ export default async function SinglePostComponent({ slug }: Props) {
             />
           </div>
           <div>
-            <div className='italic'>by Tamal Chowdhury</div>
+            <div className='italic'>by {AUTHOR_NAME}</div>
             <div className='uppercase text-[12px]'>
               Published on: {prettyDate(post.date)}
             </div>
