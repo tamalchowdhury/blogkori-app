@@ -2,7 +2,7 @@ import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
 import { API_URL, BANGLA_CATEGORY, HOME_POST_LIMIT } from "../lib/consts"
-import { banglaHfont, shamimFont } from "@/fonts/fonts"
+import { banglaHfont } from "@/fonts/fonts"
 
 export default async function HomeBanglaLatestPosts({ all = false }) {
   let perPostQuery = `&per_page=${HOME_POST_LIMIT}`

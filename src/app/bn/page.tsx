@@ -2,10 +2,11 @@ import React, { Suspense } from "react"
 import { BanglaTitle } from "../[slug]/single-post"
 import LoadingPosts from "../components/loading-posts"
 import HomeBanglaLatestPosts from "../components/home-bangla-latest-posts"
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "বাংলা পোস্টগুলো । ব্লগকরি",
-  description: "বাংলা পোস্টগুলো । ব্লগকরি",
+  title: "ব্লগকরির বাংলা পোস্টগুলো",
+  description: "ব্লগকরির বাংলা পোস্টগুলো",
 }
 
 export default function BanglaPage() {
