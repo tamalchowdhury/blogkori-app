@@ -4,6 +4,7 @@ import LoadingPosts from "./components/loading-posts"
 import { merriweather } from "./lib/utils"
 import HomeBanglaLatestPosts from "./components/home-bangla-latest-posts"
 import { banglaHfont } from "@/fonts/fonts"
+import Link from "next/link"
 
 export default async function Home() {
   return (
@@ -26,6 +27,13 @@ export default async function Home() {
         </h3>
         <Suspense fallback={<LoadingPosts />}>
           <HomeBanglaLatestPosts />
+
+          <Link
+            href='/bn'
+            className='block text-center bg-accent/10 p-4 rounded-md my-8 hover:bg-accent/40 transition hover:font-bold hover:shadow-md'
+          >
+            সবগুলো বাংলা পোস্ট দেখুন
+          </Link>
         </Suspense>
       </section>
     </div>
