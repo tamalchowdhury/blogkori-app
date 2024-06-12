@@ -1,5 +1,5 @@
 import React from "react"
-import { fetchSinglePost, merriweather } from "../lib/utils"
+import { fetchSinglePost, merriweather, prettyDate } from "../lib/utils"
 import { BANGLA_CATEGORY } from "../lib/consts"
 import { banglaHfont } from "@/fonts/fonts"
 import { Share } from "next/font/google"
@@ -40,17 +40,9 @@ export default async function SinglePostComponent({ slug }: Props) {
             />
           </div>
           <div>
-            <div className="italic">by Tamal Chowdhury</div>
+            <div className='italic'>by Tamal Chowdhury</div>
             <div className='uppercase text-[12px]'>
-              Published on:{" "}
-              {
-                // convert the date to a readable format: eg 12th August 2021
-                new Date(post.date).toLocaleDateString("en-US", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })
-              }
+              Published on: {prettyDate(post.date)}
             </div>
           </div>
         </div>
