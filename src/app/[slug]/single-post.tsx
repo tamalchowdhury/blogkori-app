@@ -52,10 +52,10 @@ export function EnglishTitle({ children }) {
   )
 }
 
-export function BanglaTitle({ children }) {
+export function BanglaTitle({ children, className = "" }) {
   return (
     <h1
-      className={`text-[28px] md:text-[38px] font-bold leading-tight ${banglaHfont.className}`}
+      className={`text-[28px] md:text-[38px] font-bold leading-tight ${banglaHfont.className} ${className}`}
     >
       {children}
     </h1>
