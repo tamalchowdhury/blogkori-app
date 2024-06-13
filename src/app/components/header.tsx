@@ -6,9 +6,9 @@ import { SITE_NAME, SITE_TAGLINE } from "../lib/consts"
 
 export default function Header() {
   return (
-    <header className='p-8 bg-blue-300'>
+    <header className='p-2 md:p-8 bg-blue-300'>
       <div className='max-w-[1200px] mx-auto'>
-        <div className='logo flex gap-4 items-center'>
+        <div className='logo flex gap-2 md:gap-4 items-center'>
           <div className=''>
             <Link href='/'>
               <Image
@@ -21,10 +21,10 @@ export default function Header() {
             </Link>
           </div>
           <div className=''>
-            <h1 className={`${merriweather.className} text-[22px]`}>
+            <h1 className={`${merriweather.className} text-[18px] md:text-[22px]`}>
               <Link href='/'>{SITE_NAME}</Link>
             </h1>
-            <div className='uppercase text-[14px] tracking-wide'>
+            <div className='uppercase text-[12px] md:text-[14px] tracking-wide'>
               {SITE_TAGLINE}
             </div>
           </div>
