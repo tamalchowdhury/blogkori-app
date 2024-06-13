@@ -29,13 +29,15 @@ export default function RootLayout({
           <div className='max-w-[1200px] mx-auto'>
             <div className='logo flex gap-4 items-center'>
               <div className=''>
-                <Image
-                  src='icon.svg'
-                  width={48}
-                  height={48}
-                  alt='blogkori logo'
-                  className='rounded-md object-cover '
-                />
+                <Link href='/'>
+                  <Image
+                    src='icon.svg'
+                    width={48}
+                    height={48}
+                    alt='blogkori logo'
+                    className='rounded-md object-cover '
+                  />
+                </Link>
               </div>
               <div>
                 <h1 className={`${merriweather.className} text-[24px]`}>
