@@ -1,8 +1,8 @@
 import Link from "next/link"
 import React from "react"
-import { merriweather } from "../lib/utils"
 import { API_URL, BANGLA_CATEGORY, HOME_POST_LIMIT } from "../lib/consts"
 import { banglaHfont } from "@/fonts/fonts"
+import { ReadMoreLinkBn } from "./read-more-links"
 
 export default async function HomeBanglaLatestPosts({ all = false }) {
   let perPostQuery = `&per_page=${HOME_POST_LIMIT}`
@@ -37,9 +37,7 @@ export default async function HomeBanglaLatestPosts({ all = false }) {
             className={` text-[16px] md:text-[20px]`}
             dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
           />
-          <span>
-            <Link href={`/${p.slug}`}>বাকিটা পড়ুন</Link>
-          </span>
+          <ReadMoreLinkBn slug={p.slug} />
         </div>
       ))}
     </div>

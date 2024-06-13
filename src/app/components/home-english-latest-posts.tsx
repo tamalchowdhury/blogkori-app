@@ -2,13 +2,17 @@ import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
 import { API_URL, ENGLISH_CATEGORY, HOME_POST_LIMIT } from "../lib/consts"
+import { ReadMoreLinkEn } from "./read-more-links"
 
 export default async function HomeEnglishLatestPosts() {
-  const response = await fetch(`${API_URL}/posts?categories=${ENGLISH_CATEGORY}&per_page=${HOME_POST_LIMIT}`, {
-    next: {
-      revalidate: 60,
-    },
-  })
+  const response = await fetch(
+    `${API_URL}/posts?categories=${ENGLISH_CATEGORY}&per_page=${HOME_POST_LIMIT}`,
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  )
 
   const post = await response.json()
 
@@ -27,9 +31,7 @@ export default async function HomeEnglishLatestPosts() {
             className='text-[16px] md:text-[20px]'
             dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
           />
-          <span>
-            <Link href={`/${p.slug}`}>Read More</Link>
-          </span>
+          <ReadMoreLinkEn slug={p.slug} />
         </div>
       ))}
     </div>
