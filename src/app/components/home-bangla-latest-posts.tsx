@@ -1,6 +1,5 @@
 import Link from "next/link"
 import React from "react"
-import { merriweather } from "../lib/utils"
 import { API_URL, BANGLA_CATEGORY, HOME_POST_LIMIT } from "../lib/consts"
 import { banglaHfont } from "@/fonts/fonts"
 
@@ -37,11 +36,20 @@ export default async function HomeBanglaLatestPosts({ all = false }) {
             className={` text-[16px] md:text-[20px]`}
             dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
           />
-          <span>
-            <Link href={`/${p.slug}`}>বাকিটা পড়ুন</Link>
-          </span>
+          <ReadMoreLink slug={p.slug} />
         </div>
       ))}
     </div>
+  )
+}
+
+function ReadMoreLink({ slug }) {
+  return (
+    <Link
+      className={`text-[14px] py-[5px] px-4 bg-slate-200 inline-block rounded-md ${banglaHfont.className} hover:bg-slate-300 hover:underline`}
+      href={`/${slug}`}
+    >
+      বাকিটা পড়ুন
+    </Link>
   )
 }
