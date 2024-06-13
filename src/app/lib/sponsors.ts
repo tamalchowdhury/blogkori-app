@@ -4,7 +4,7 @@ export const sponsorLinks = [
     link: "https://www.plesk.com/blog/various/free-wordpress-cdn/",
   },
   {
-    name: "Divi Theme for WordPress",
+    name: "Divi Theme for WP",
     link: "https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=35488&tid1=blogkori_sidebar",
   },
 ]
