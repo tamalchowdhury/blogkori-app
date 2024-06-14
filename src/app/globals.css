@@ -21,5 +21,5 @@
 /* social share buttons */
 
 .share-button {
-  @apply py-2 px-4 rounded-full text-white/80 hover:text-white cursor-pointer transition;
+  @apply flex gap-2 items-center py-2 px-4 rounded-full text-white/80 hover:text-white cursor-pointer transition;
 }
