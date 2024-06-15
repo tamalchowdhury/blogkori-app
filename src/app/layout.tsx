@@ -1,11 +1,9 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import Link from "next/link"
-import { merriweather } from "./lib/utils"
 import Sidebar from "./components/sidebar"
-import Image from "next/image"
 import Header from "./components/header"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -32,6 +30,11 @@ export default function RootLayout({
           <Sidebar />
         </div>
       </body>
+      <Script
+        defer
+        data-domain='blogkori.com'
+        src='https://plausible.io/js/script.js'
+      />
     </html>
   )
 }
