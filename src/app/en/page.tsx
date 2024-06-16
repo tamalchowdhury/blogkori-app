@@ -1,8 +1,8 @@
 import React, { Suspense } from "react"
-import { BanglaTitle, EnglishTitle } from "../[slug]/single-post"
+import { EnglishTitle } from "../[slug]/single-post"
 import LoadingPosts from "../components/loading-posts"
-import HomeBanglaLatestPosts from "../components/home-bangla-latest-posts"
 import { Metadata } from "next"
+import HomeEnglishLatestPosts from "../components/home-english-latest-posts"
 
 export const metadata: Metadata = {
   title: "English Posts of BlogKori",
@@ -14,7 +14,7 @@ export default function BanglaPage() {
     <div>
       <EnglishTitle className='mb-4 md:-ml-4'>English Posts</EnglishTitle>
       <Suspense fallback={<LoadingPosts />}>
-        <HomeBanglaLatestPosts all={true} />
+        <HomeEnglishLatestPosts all={true} />
       </Suspense>
     </div>
   )
