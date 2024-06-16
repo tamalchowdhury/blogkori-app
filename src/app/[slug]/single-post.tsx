@@ -61,10 +61,10 @@ export default async function SinglePostComponent({ slug }: Props) {
   )
 }
 
-export function EnglishTitle({ children }) {
+export function EnglishTitle({ children, className = "" }) {
   return (
     <h1
-      className={`text-[28px] md:text-[38px] font-bold leading-tight ${merriweather.className}`}
+      className={`text-[28px] md:text-[38px] font-bold leading-tight ${merriweather.className} ${className}`}
     >
       {children}
     </h1>
