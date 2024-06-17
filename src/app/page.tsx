@@ -17,6 +17,12 @@ export default async function Home() {
         </h3>
         <Suspense fallback={<LoadingPosts />}>
           <HomeEnglishLatestPosts />
+          <Link
+            href='/en'
+            className='block text-center bg-accent/10 p-4 rounded-md my-8 hover:bg-accent/40 transition hover:font-bold hover:shadow-md'
+          >
+            Read All English Posts
+          </Link>
         </Suspense>
       </section>
       <section>
