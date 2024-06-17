@@ -15,7 +15,7 @@ export default async function HomeBanglaLatestPosts({ all = false }) {
     `${API_URL}/posts?categories=${BANGLA_CATEGORY}${perPostQuery}`,
     {
       next: {
-        revalidate: 60,
+        revalidate: 120,
       },
     }
   )
