@@ -17,12 +17,7 @@ export default async function Home() {
         </h3>
         <Suspense fallback={<LoadingPosts />}>
           <HomeEnglishLatestPosts />
-          <Link
-            href='/en'
-            className='block text-center bg-accent/10 p-4 rounded-md my-8 hover:bg-accent/40 transition hover:font-bold hover:shadow-md'
-          >
-            Read All English Posts
-          </Link>
+          <ReadAllPosts href='/en'>Read All English Posts</ReadAllPosts>
         </Suspense>
       </section>
       <section>
@@ -34,14 +29,20 @@ export default async function Home() {
         <Suspense fallback={<LoadingPosts />}>
           <HomeBanglaLatestPosts />
 
-          <Link
-            href='/bn'
-            className='block text-center bg-accent/10 p-4 rounded-md my-8 hover:bg-accent/40 transition hover:font-bold hover:shadow-md'
-          >
-            সবগুলো বাংলা পোস্ট দেখুন
-          </Link>
+          <ReadAllPosts href='/bn'>সবগুলো বাংলা পোস্ট দেখুন</ReadAllPosts>
         </Suspense>
       </section>
     </div>
+  )
+}
+
+function ReadAllPosts({ children, href }) {
+  return (
+    <Link
+      href={href}
+      className='block text-center bg-accent/10 p-4 rounded-md my-8 hover:bg-accent/40 transition hover:font-bold hover:shadow-md'
+    >
+      {children}
+    </Link>
   )
 }
