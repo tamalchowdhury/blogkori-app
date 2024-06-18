@@ -1,11 +1,8 @@
 import React, { Suspense } from "react"
-import { fetchSinglePost, sleep } from "../lib/utils"
+import { fetchSinglePost } from "../lib/utils"
 import LoadingSinglePost from "./loading-single-post"
 import SinglePostComponent from "./single-post"
 import { Metadata } from "next"
-import Link from "next/link"
-import MoreButton from "./components/more-button"
-import CopyButton from "./components/copy-button"
 
 type Props = {
   params: {
@@ -33,15 +30,11 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 export default async function SinglePostPage({ params }: Props) {
   const { slug } = params
 
-  
-
   return (
     <>
-      <Suspense fallback={<LoadingSinglePost />}>
+      <Suspense key={slug} fallback={<LoadingSinglePost />}>
         <SinglePostComponent slug={slug} />
       </Suspense>
-
-      
     </>
   )
 }
