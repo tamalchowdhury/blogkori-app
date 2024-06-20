@@ -15,9 +15,13 @@ export async function fetchSinglePost(slug: string) {
 }
 
 export function prettyDate(date: string) {
-  return new Date().toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
   })
+}
+
+export function cleanUpText(text) {
+  return text.replace(/<[^>]*>/g, "").replace(/\n\n+/g, "\n\n")
 }
