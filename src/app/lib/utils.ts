@@ -21,3 +21,7 @@ export function prettyDate(date: string) {
     year: "numeric",
   })
 }
+
+export function cleanUpText(text) {
+  return text.replace(/<[^>]*>/g, "").replace(/\n\n+/g, "\n\n")
+}

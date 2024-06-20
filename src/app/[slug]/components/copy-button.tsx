@@ -1,17 +1,15 @@
 "use client"
 
+import { AUTHOR_NAME } from "@/app/lib/consts"
+import { cleanUpText } from "@/app/lib/utils"
 import React, { useState } from "react"
 
 export default function CopyButton({ title, content, url }) {
   const [isCopied, setIsCopied] = useState(false)
 
-  const creditText = `Post Credit: Tamal Chowdhury, ${url}`
+  const creditText = `Post Credit: ${AUTHOR_NAME}, ${url}`
 
-  function cleanUpText(text) {
-    // remove html tags
-    // also remove unnecessary new line characters
-    return text.replace(/<[^>]*>/g, "").replace(/\n\n+/g, "\n\n")
-  }
+  
 
   function handleCopyText() {
     try {
