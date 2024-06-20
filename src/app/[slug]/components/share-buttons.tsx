@@ -3,9 +3,10 @@ import React from "react"
 import CopyButton from "./copy-button"
 import MoreButton from "./more-button"
 import { merriweather } from "@/app/lib/utils"
+import { BASE_URL } from "@/app/lib/consts"
 
 export default function ShareButtons({ slug, title, content }) {
-  const url = `https://blogkori.com/${slug}`
+  const url = `${BASE_URL}/${slug}`
 
   const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`
   const waUrl = `https://wa.me/?text=${url}`
@@ -31,7 +32,7 @@ export default function ShareButtons({ slug, title, content }) {
         >
           WhatsApp <WaIcon />
         </Link>
-        <CopyButton title={title} content={content} url={url} />
+        <CopyButton title={title} content={content} url={url} slug={slug} />
         <MoreButton url={url} />
       </div>
     </section>
