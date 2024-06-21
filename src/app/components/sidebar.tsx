@@ -9,7 +9,9 @@ export default function Sidebar() {
     <aside className='p-4 md:p-0 md:mt-[50px]'>
       <SidebarWidget>
         <SidebarHeading>Sponsors</SidebarHeading>
-        <LinksWidget links={sponsorLinks} />
+        <LinksWidget links={sponsorLinks}>
+          <SponsorMeLink />
+        </LinksWidget>
       </SidebarWidget>
       <SidebarWidget>
         <SidebarHeading>Friends</SidebarHeading>
@@ -29,7 +31,13 @@ function SidebarWidget({ children }: { children: React.ReactNode }) {
   return <div className='mb-8'>{children}</div>
 }
 
-function LinksWidget({links}) {
+function LinksWidget({
+  links,
+  children,
+}: {
+  links: any[]
+  children?: React.ReactNode
+}) {
   return (
     <ul className='space-y-1'>
       {links.map((link) => (
@@ -43,6 +51,20 @@ function LinksWidget({links}) {
           </Link>
         </li>
       ))}
+      {children}
     </ul>
+  )
+}
+
+function SponsorMeLink() {
+  return (
+    <li className='uppercase text-[14px]' key='sponsore-me'>
+      <Link
+        href='mailto:mail@tamalchowdhury.com'
+        className='border-b border-b-pink-600 border-dashed hover:border-solid'
+      >
+        Become a sponsor ⭐
+      </Link>
+    </li>
   )
 }
