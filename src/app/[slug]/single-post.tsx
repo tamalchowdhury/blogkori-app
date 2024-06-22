@@ -2,9 +2,9 @@ import React from "react"
 import { fetchSinglePost, merriweather, prettyDate } from "../lib/utils"
 import { AUTHOR_NAME, BANGLA_CATEGORY } from "../lib/consts"
 import { banglaHfont } from "@/fonts/fonts"
-import { Share } from "next/font/google"
 import ShareButtons from "./components/share-buttons"
 import Image from "next/image"
+import { EnglishTitle } from "../components/english-title"
 
 type Props = {
   slug: string
@@ -58,16 +58,6 @@ export default async function SinglePostComponent({ slug }: Props) {
         content={post.content.rendered}
       />
     </>
-  )
-}
-
-export function EnglishTitle({ children, className = "" }) {
-  return (
-    <h1
-      className={`text-[28px] md:text-[38px] font-bold leading-tight ${merriweather.className} ${className}`}
-    >
-      {children}
-    </h1>
   )
 }
 
