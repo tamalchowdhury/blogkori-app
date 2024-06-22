@@ -10,7 +10,8 @@
   @apply border my-6;
 }
 
-.post__body .wp-block-heading {
+.post__body .wp-block-heading,
+.post__body h2 {
   @apply text-2xl font-bold my-6;
 }
 
