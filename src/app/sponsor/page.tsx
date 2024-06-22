@@ -10,8 +10,14 @@ export default function SponsorPage() {
         <h2>Sponsored Content</h2>
         <p>
           Become a sponsor by purchasing a paid link in the sidebar or
-          commissioning a paid review. Please send me an email:{" "}
+          commissioning a paid review. Please send me an email:
+          <br />
           <strong>mail [at] tamalchowdhury [dot] com</strong>
+        </p>
+        <h2>Sharing is Caring</h2>
+        <p>
+          Share this site with your friends and family. Share it on social media
+          and help spread the word.
         </p>
       </div>
     </>

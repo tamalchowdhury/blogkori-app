@@ -60,7 +60,7 @@ function SponsorMeLink() {
   return (
     <li className='uppercase text-[14px]' key='sponsore-me'>
       <Link
-        href='mailto:mail@tamalchowdhury.com'
+        href='/sponsor'
         className='border-b border-b-pink-600 border-dashed hover:border-solid'
       >
         Become a sponsor ⭐
