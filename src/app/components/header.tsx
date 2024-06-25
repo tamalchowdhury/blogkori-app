@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
 import { SITE_NAME, SITE_TAGLINE } from "../lib/consts"
+import { useParams, usePathname } from "next/navigation"
 
 const pages = [
   { name: "Home", url: "/" },
@@ -11,6 +14,7 @@ const pages = [
 ]
 
 export default function Header() {
+  const path = usePathname()
   return (
     <header className='p-2 md:p-4 bg-[#1c2023] text-white'>
       <div className='max-w-[1200px] space-y-4 md:space-y-0 mx-auto md:flex  items-center'>
@@ -42,7 +46,9 @@ export default function Header() {
             {pages.map((page) => (
               <li key={page.url}>
                 <Link
-                  className='text-white/70 hover:text-white transition px-2 py-1'
+                  className={`text-white/70 hover:text-white transition px-2 py-1 ${
+                    path === page.url ? "font-bold text-white" : ""
+                  }`}
                   href={page.url}
                 >
                   {page.name}
