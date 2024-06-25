@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { EnglishTitle } from "../components/english-title"
+import { EnglishTitle } from "../../components/english-title"
 
 const title = "Sponsor BlogKori"
 

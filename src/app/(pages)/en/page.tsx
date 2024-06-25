@@ -1,8 +1,8 @@
 import React, { Suspense } from "react"
-import LoadingPosts from "../components/loading-posts"
+import LoadingPosts from "../../components/loading-posts"
 import { Metadata } from "next"
-import HomeEnglishLatestPosts from "../components/home-english-latest-posts"
-import { EnglishTitle } from "../components/english-title"
+import HomeEnglishLatestPosts from "../../components/home-english-latest-posts"
+import { EnglishTitle } from "../../components/english-title"
 
 export const metadata: Metadata = {
   title: "English Posts of BlogKori",
