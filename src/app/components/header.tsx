@@ -5,9 +5,10 @@ import Link from "next/link"
 import React from "react"
 import { merriweather } from "../lib/utils"
 import { SITE_NAME, SITE_TAGLINE } from "../lib/consts"
-import { useParams, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
+import { twMerge } from "tailwind-merge"
 
-const pages = [
+const menuPaths = [
   { name: "Home", url: "/" },
   { name: "Sponsor", url: "/sponsor" },
   { name: "Contact", url: "/contact" },
@@ -43,12 +44,13 @@ export default function Header() {
         </div>
         <nav className='ml-auto'>
           <ul className='flex gap-2 md:gap-8'>
-            {pages.map((page) => (
+            {menuPaths.map((page) => (
               <li key={page.url}>
                 <Link
-                  className={`text-white/70 hover:text-white transition px-2 py-1 ${
-                    path === page.url ? "font-bold text-white" : ""
-                  }`}
+                  className={twMerge(
+                    "text-white/70 hover:text-white transition px-2 py-1",
+                    path === page.url && "text-white font-bold"
+                  )}
                   href={page.url}
                 >
                   {page.name}
