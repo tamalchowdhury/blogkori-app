@@ -7,12 +7,7 @@ import { merriweather } from "../lib/utils"
 import { SITE_NAME, SITE_TAGLINE } from "../lib/consts"
 import { usePathname } from "next/navigation"
 import { twMerge } from "tailwind-merge"
-
-const menuPaths = [
-  { name: "Home", url: "/" },
-  { name: "Sponsor", url: "/sponsor" },
-  { name: "Contact", url: "/contact" },
-]
+import { menuPaths } from "../lib/menuPaths"
 
 export default function Header() {
   const path = usePathname()
