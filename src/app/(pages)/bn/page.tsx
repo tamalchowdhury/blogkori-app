@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
-import { BanglaTitle } from "../[slug]/single-post"
-import LoadingPosts from "../components/loading-posts"
-import HomeBanglaLatestPosts from "../components/home-bangla-latest-posts"
+import { BanglaTitle } from "../../[slug]/single-post"
+import LoadingPosts from "../../components/loading-posts"
+import HomeBanglaLatestPosts from "../../components/home-bangla-latest-posts"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
