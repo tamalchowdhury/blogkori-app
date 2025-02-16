@@ -19,8 +19,4 @@ export const friendsLinks = [
     name: "Rubel SBS",
     link: "https://www.facebook.com/rubelsbs7",
   },
-  {
-    name: "Tanveer Fahad Haq",
-    link: "https://theattention.network",
-  },
 ]

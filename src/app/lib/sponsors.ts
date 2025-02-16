@@ -1,9 +1,5 @@
 export const sponsorLinks = [
   {
-    name: "MySocial, Link in Bio Tool",
-    link: "https://mysoci.al"
-  },
-  {
     name: "Sign up for Wise",
     link: "https://wise.com/invite/dic/tamalc5",
   },
