@@ -4,8 +4,12 @@ export const sponsorLinks = [
     link: "https://wise.com/invite/dic/tamalc5",
   },
   {
+    name: "Get a virtual Visa card with $5 bonus",
+    link: "https://url.hk/i/en/n5via",
+  },
+  {
     name: "Hostinger, get 20% off",
-    link: "https://hostinger.com?REFERRALCODE=1TAMAL754"
+    link: "https://hostinger.com?REFERRALCODE=1TAMAL754",
   },
   {
     name: "Divi Theme for WP",
