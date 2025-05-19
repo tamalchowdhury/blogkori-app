@@ -1,5 +1,5 @@
 // https://blogkori.com/wp-json/wp/v2/posts
-const siteUrl = "https://palegreen-goldfinch-396606.hostingersite.com"
+const siteUrl = "https://cdn.blogkori.com/"
 
 // wordpress rest api url
 export const API_URL = siteUrl + "/wp-json/wp/v2"
