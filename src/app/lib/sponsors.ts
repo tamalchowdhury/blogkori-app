@@ -1,10 +1,10 @@
 export const sponsorLinks = [
   {
-    name: "Sign up for Wise",
-    link: "https://wise.com/invite/dic/tamalc5",
+    name: "Gamers World BD",
+    link: "https://gamersworldbd.com",
   },
   {
-    name: "Get a virtual Visa card with $5 bonus",
+    name: "RedotPay, Get $5 bonus",
     link: "https://url.hk/i/en/n5via",
   },
   {
