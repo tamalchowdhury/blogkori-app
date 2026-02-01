@@ -14,7 +14,7 @@ export default function Sidebar() {
         </LinksWidget>
       </SidebarWidget>
       <SidebarWidget>
-        <SidebarHeading>Friends</SidebarHeading>
+        <SidebarHeading>Creator Friends</SidebarHeading>
         <LinksWidget links={friendsLinks} />
       </SidebarWidget>
     </aside>
