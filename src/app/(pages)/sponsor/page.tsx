@@ -20,7 +20,7 @@ export default function SponsorPage() {
           Become a sponsor by purchasing a paid link in the sidebar or
           commissioning a paid review. Please send me an email:
           <br />
-          <strong>mail [at] tamalchowdhury [dot] com</strong>
+          <strong>tamal.a.chowdhury [at] gmail [dot] com</strong>
         </p>
         <h2>Sharing is Caring</h2>
         <p>

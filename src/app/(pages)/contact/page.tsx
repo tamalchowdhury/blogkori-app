@@ -16,7 +16,7 @@ export default function ContactPage() {
         <p>
           To contact me send me an email at the following address:
           <br />
-          <strong>mail [at] tamalchowdhury [dot] com</strong>
+          <strong>tamal.a.chowdhury [at] gmail [dot] com</strong>
         </p>
         <p>
           If you need to call me or meet me, please let me know it in the email.
