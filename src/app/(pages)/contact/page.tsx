@@ -23,6 +23,9 @@ export default function ContactPage() {
           I check my email regularly and will get back to you as soon as
           possible for urgent matters.
         </p>
+        <p>
+        Connect with me on <a href="https://www.facebook.com/tamalchowdhury.profile" target="_blank" rel="noreferrer noopener">Facebook</a>, <a href="https://www.linkedin.com/in/tamalchowdhury" target="_blank" rel="noreferrer noopener">Linkedin</a>, <a href="https://x.com/tamalchow" target="_blank" rel="noreferrer noopener">X</a>, or <a href="https://www.instagram.com/tamal.anwar.chowdhury" target="_blank" rel="noreferrer noopener">Instagram</a>. 
+        </p>
       </div>
     </>
   )

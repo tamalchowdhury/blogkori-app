@@ -9,6 +9,7 @@ export const SITE_NAME = "BlogKori"
 export const SITE_TAGLINE = "Blogging My Online Journey"
 export const AUTHOR_NAME = "Tamal Anwar Chowdhury"
 
+// the category ids for the english and bangla posts from wordpress site
 export const ENGLISH_CATEGORY = 16
 export const BANGLA_CATEGORY = 9
 
