@@ -9,8 +9,8 @@ export async function POST(request: Request) {
       return new Response('Missing post_permalink', { status: 400 })
     }
     
-    const path = body.post_permalink.split('/').pop()
-    console.log('webhook received - body:', JSON.stringify(body, null, 2));
+    const path = body.post.post_name
+    console.log('webhook received - path:', path);
 
     revalidatePath(`/${path}`)
     return new Response('OK')
