@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     }
     
     const path = body.post_permalink.split('/').pop()
-    console.log('webhook received - permalink path:', path);
+    console.log('webhook received - body:', JSON.stringify(body, null, 2));
 
     revalidatePath(`/${path}`)
     return new Response('OK')
